@@ -26,7 +26,39 @@ def diagnose_car():
 
     """
 
-    print("The battery cables may be damaged. Replace cables and try again.")
+
+    car = raw_input("Is the car silent when you turn the key? ")
+    if car == "y":
+        car = raw_input("Are the battery terminals corroded? ")
+        if car == "y":
+            print "Clean terminals and try starting again."
+        elif car == "n":
+            print("Replace cables and try again.")
+    elif car == "n":
+        car = raw_input("Does the car make a clicking noise? ")
+        if car == "y":
+            print "Replace the battery."
+        elif car == "n":
+            car = raw_input("Does the car crank up but fail to start? ")
+            if car == "y":
+                print "Check spark plug connections."
+            elif car == "n":
+                car = raw_input("Does the engine start then die? ")
+                if car == "y":
+                    car = raw_input("Does you care have fuel injection? ")
+                    if car == "n":
+                        print "Check to make sure the choke is opening and closing."
+                    elif car == "y":
+                        print "Get it in for service."
+
+
+diagnose_car()
+
+
+
+
+
+
 
 
 diagnose_car()

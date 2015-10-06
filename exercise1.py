@@ -12,50 +12,52 @@ __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
-#Input commission
-#Input share_price
-#Input share_number
-#Calculate cost_of_shares as share_price multiplied by share_number
-#Display cost_of_shares
-#Calculate commission_amount as commission multiplied by cost_of_shares
-#Display commission_amount
-#Calculate total_cost as commission_amount plus cost_of_shares
-#Display total_cost
-
-#Calculate gross_revenue by multiplying selling_share_price and share_number
-#Display gross_revenue
-#Calculate selling_commission_amount by multiplying gross_revenue and commission
-#Display selling_commission_amount
-#Calculate net_revenue by subtracting selling_commission_amount from gross_revenue
-#Display net_revenue
-#Calculate profit by subtracting total_cost from net_revenue
 
 
-money = 2000.00
-print(money)
+#Inputs for our variables  including the rate charged for commission by Berkshire Hathaway(3%), the price of each share when
+#Lakshmi bought the shares ($900.00), the price of each share when Lakshmi sold her shares ($942.75) and the number of shares
+#she bought/sold (2000).
+
+#Expected output is that Lakshmi will lose $25065.00 by selling her shares.
 
 commission = 0.03
 buying_share_price = 900
 selling_share_price = 942.75
 share_number = 2000
 
+#Displaying price of shares at time of purchase
+print"Price of shares at time of purchase:", "$" +str(buying_share_price)
+
+#Displaying the number of shares purchased
+print"Number of shares purchased: ",share_number
+
+#Displaying the cost of shares before commission by calculating cost of shares multiplied by buying share price
 cost_of_shares = share_number*buying_share_price
-print(cost_of_shares)
+print"Cost of purchasing shares before commission:","$" +str(cost_of_shares)
 
+#Displaying the amount charged for commission at time of purchase
 buying_commission_amount = cost_of_shares*commission
-print(buying_commission_amount)
+print"The amount of commission charged at time of purchase:", "$" +str(buying_commission_amount)
 
+#Displaying total cost of purchase
 total_cost = buying_commission_amount+cost_of_shares
-print"The total cost is: ", total_cost
+print"The total cost of the purchasing transaction is:", "$" +str(total_cost)
 
+#Displaying gross revenue from selling shares before subtracting commission
 gross_revenue = selling_share_price*share_number
-print(gross_revenue)
+print"Revenue from selling shares before commission:", "$" +str(gross_revenue)
 
+#Displaying commission charged at time of selling shares by multiplying the commision percentage times total
+#money recieved from selling shares
 selling_commission = gross_revenue*commission
-print(selling_commission)
+print"Commission charged at time of selling shares:", "$" +str(selling_commission)
 
+#Displaying net revenue of the sale of shares after commission by subtracting the commission charged at time of sale from revenue
+#gained at time of sale.
 net_revenue = gross_revenue-selling_commission
-print(net_revenue)
+print"Revenue from selling shares after commission:", "$" +str(net_revenue)
 
+#Displaying money gained/lost by subtracting total cost for purchasing shares  from revenue gained through selling shares
+#after commission
 profit = net_revenue-total_cost
-print(profit)
+print"Money gained/lost through selling shares:" " -$" +str(abs(profit))
