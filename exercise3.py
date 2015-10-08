@@ -27,32 +27,32 @@ def diagnose_car():
     """
 
 
-    car = raw_input("Is the car silent when you turn the key? ")
-    if car == "y":
-        car = raw_input("Are the battery terminals corroded? ")
-        if car == "y":
+    car = raw_input("Is the car silent when you turn the key?")
+    if car == "Y":
+        car = raw_input("Are the battery terminals corroded?")
+        if car == "Y":
             print "Clean terminals and try starting again."
-        elif car == "n":
+        elif car == "N":
             print("Replace cables and try again.")
-    elif car == "n":
-        car = raw_input("Does the car make a clicking noise? ")
-        if car == "y":
+    elif car == "N":
+        car = raw_input("Does the car make a clicking noise?")
+        if car == "Y":
             print "Replace the battery."
-        elif car == "n":
-            car = raw_input("Does the car crank up but fail to start? ")
-            if car == "y":
+        elif car == "N":
+            car = raw_input("Does the car crank up but fail to start?")
+            if car == "Y":
                 print "Check spark plug connections."
-            elif car == "n":
-                car = raw_input("Does the engine start then die? ")
-                if car == "y":
-                    car = raw_input("Does you care have fuel injection? ")
-                    if car == "n":
+            elif car == "N":
+                car = raw_input("Does the engine start then die?")
+                if car == "Y":
+                    car = raw_input("Does you care have fuel injection?")
+                    if car == "N":
                         print "Check to make sure the choke is opening and closing."
-                    elif car == "y":
+                    elif car == "Y":
                         print "Get it in for service."
 
 
-diagnose_car()
+#diagnose_car()
 
 
 
