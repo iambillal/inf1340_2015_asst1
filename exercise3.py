@@ -61,4 +61,3 @@ diagnose_car()
 
 
 
-diagnose_car()
